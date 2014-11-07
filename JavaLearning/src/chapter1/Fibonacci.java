@@ -1,12 +1,14 @@
 package chapter1;
 
 public class Fibonacci {
+	static final String TITLE = "Fibonacci sequence for values < 50\n";
+	
 	/** Print out the Fibonacci sequence for values < 50 */
 	public static void main(String[] args){
 		int lo = 1;
 		int hi = 1;
 		
-		System.out.println("Fibonacci sequence for values < 50\n");
+		System.out.println(TITLE);
 		System.out.println(lo);
 		while(hi < 50){
 			System.out.println(hi);
