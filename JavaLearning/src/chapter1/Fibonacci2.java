@@ -2,15 +2,24 @@ package chapter1;
 
 public class Fibonacci2 {
 	static final int MAX = 50;
+	public static final int SIZE = 9;
+	
 	/** Print the Fibonacci sequence for values < MAX */
 	public static void main(String[] args){
+		int[] sequence = new int[SIZE];
+		
 		int lo = 1;
 		int hi = 1;
-		System.out.println(lo);
+		int index = 0;
+		sequence[index++] = hi;
 		while(hi < MAX){
-			System.out.println(hi);
+			sequence[index++] = hi;
 			hi = lo + hi;
 			lo = hi - lo;
+		}
+		
+		for(int i = 0; i < sequence.length; i++){
+			System.out.println(sequence[i]);
 		}
 	}
 }
