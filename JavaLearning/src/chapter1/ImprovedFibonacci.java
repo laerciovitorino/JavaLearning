@@ -29,18 +29,22 @@ public class ImprovedFibonacci {
 			else{
 				mark = "";
 			}
-			//System.out.println(i + ": " + hi + mark);
 			hi = lo + hi;
 			lo = hi - lo;
 		}
 		
+		String[] outputs = new String[MAX_INDEX];
 		for(int i = 0; i < fiboSeq.length; i++){
 			if(fiboSeq[i].getEven()){
-				System.out.println((i+1) + ": " + fiboSeq[i].getValue() + mark);
+				outputs[i] = (i+1) + ": " + fiboSeq[i].getValue() + mark;
 			}
 			else{
-				System.out.println((i+1) + ": " + fiboSeq[i].getValue());
+				outputs[i] = (i+1) + ": " + fiboSeq[i].getValue();
 			}
+		}
+		
+		for(int i = 0; i < outputs.length; i++){
+			System.out.printf("%s%n", outputs[i]);
 		}
 	}
 }
